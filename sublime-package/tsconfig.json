@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "declarationMap": false,
+    "inlineSources": false,
+    "declaration": false,
+    "stripInternal": true,
+    "lib": ["es2019"],
+    "strict": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "outDir": "out",
+    "rootDir": "src",
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

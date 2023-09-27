@@ -1,0 +1,72 @@
+{
+  "contributions": {
+    "settings": [
+      {
+        "schema": {
+          "$id": "sublime://settings/LSP-leo",
+          "definitions": {
+            "PluginConfig": {
+              "properties": {
+                "settings": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "leo.validate": {
+                      "type": "boolean",
+                      "default": true,
+                      "description": "Enable/disable validation feature"
+                    },
+                    "leo.completion": {
+                      "type": "boolean",
+                      "default": true,
+                      "description": "Enable/disable completion feature"
+                    },
+                    "leo.maxNumberOfProblems": {
+                      "scope": "resource",
+                      "type": "number",
+                      "default": 100,
+                      "description": "Controls the maximum number of problems produced by the server."
+                    },
+                    "leo.trace.server": {
+                      "scope": "window",
+                      "type": "string",
+                      "enum": ["off", "messages", "verbose"],
+                      "default": "verbose",
+                      "description": "Traces the communication between VS Code and the language server."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "allOf": [
+            {
+              "$ref": "sublime://settings/LSP-plugin-base"
+            },
+            {
+              "$ref": "sublime://settings/LSP-leo#/definitions/PluginConfig"
+            }
+          ]
+        },
+        "file_patterns": ["/LSP-leo.sublime-settings"]
+      },
+      {
+        "schema": {
+          "properties": {
+            "settings": {
+              "properties": {
+                "LSP": {
+                  "properties": {
+                    "LSP-leo": {
+                      "$ref": "sublime://settings/LSP-leo#/definitions/PluginConfig"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "file_patterns": ["/*.sublime-project"]
+      }
+    ]
+  }
+}
