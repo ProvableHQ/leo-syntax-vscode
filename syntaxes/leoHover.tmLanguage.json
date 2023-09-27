@@ -1,0 +1,373 @@
+{
+  "name": "leoHover",
+  "scopeName": "source.leo.hover",
+  "scope": "source.leo.hover",
+  "patterns": [
+    {
+      "comment": "Import path construction",
+      "name": "import_path_construction",
+      "match": "\\b(import)\\b (\".*\")",
+      "captures": {
+        "1": {
+          "name": "keyword.control.import.leo.hover"
+        },
+        "2": {
+          "name": "path.import.leo.hover"
+        }
+      }
+    },
+    {
+      "include": "#circuit_keyword"
+    },
+    {
+      "include": "#mapping_keyword"
+    },
+    {
+      "include": "#signature_keyword"
+    },
+    {
+      "include": "#algorithm_function_keyword"
+    },
+    {
+      "comment": "Function|Import function first line",
+      "name": "import_function_first_line",
+      "begin": "\\b(function|finalize|transition|inline)\\b (\\b\\w+\\b)",
+      "end": "$",
+      "captures": {
+        "1": {
+          "name": "storage.type.function.leo.hover"
+        },
+        "2": {
+          "name": "name.function.leo.hover"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#param_name"
+        },
+        {
+          "include": "#core_types"
+        },
+        {
+          "include": "#integer_literal"
+        },
+        {
+          "include": "#storage_type_const"
+        },
+        {
+          "include": "#storage_modifier_mutable"
+        },
+        {
+          "include": "#built-in_core_assign"
+        },
+        {
+          "include": "#boolean_constant"
+        },
+        {
+          "include": "#circuit_name"
+        }
+      ]
+    },
+    {
+      "comment": "Finalize|Import finalize first line",
+      "name": "import_finalize_first_line",
+      "begin": "\\b(finalize)\\b (\\b\\w+\\b)",
+      "end": "$",
+      "captures": {
+        "1": {
+          "name": "storage.type.finalize.leo.hover"
+        },
+        "2": {
+          "name": "name.finalize.leo.hover"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#param_name"
+        },
+        {
+          "include": "#core_types"
+        },
+        {
+          "include": "#integer_literal"
+        },
+        {
+          "include": "#storage_type_const"
+        },
+        {
+          "include": "#storage_modifier_mutable"
+        },
+        {
+          "include": "#built-in_core_assign"
+        },
+        {
+          "include": "#boolean_constant"
+        },
+        {
+          "include": "#circuit_name"
+        }
+      ]
+    },
+    {
+      "comment": "Function|Import function first line",
+      "name": "import_function_first_line",
+      "begin": "\\b(function)\\b (\\b\\w+\\b)",
+      "end": "$",
+      "captures": {
+        "1": {
+          "name": ".hover"
+        },
+        "2": {
+          "name": "name.function.leo.hover"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#param_name"
+        },
+        {
+          "include": "#core_types"
+        },
+        {
+          "include": "#integer_literal"
+        },
+        {
+          "include": "#storage_type_const"
+        },
+        {
+          "include": "#storage_modifier_mutable"
+        },
+        {
+          "include": "#built-in_core_assign"
+        },
+        {
+          "include": "#boolean_constant"
+        },
+        {
+          "include": "#circuit_name"
+        }
+      ]
+    },
+
+    {
+      "comment": "Console documented chain",
+      "name": "console_documented_chain",
+      "match": "console\\.(\\blog\\b|\\bdebug\\b|\\berror\\b|\\bassert\\b)",
+      "captures": {
+        "1": {
+          "name": "entity.name.method.console.leo.hover"
+        }
+      }
+    },
+    {
+      "comment": "Circuit documented chain",
+      "name": "circuit_documented_chain",
+      "begin": "(?<=\\w)(\\.|\\:\\:)((\\b\\w+\\b\\s)|(\\b\\w+\\b\\s*(?=:)))",
+      "end": "$",
+      "captures": {
+        "3": {
+          "name": "call.name.method.leo.hover"
+        },
+        "4": {
+          "name": "access.name.attribute.leo.hover"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#mapping_keyword"
+        },
+        {
+          "include": "#algorithm_function_keyword"
+        },
+        {
+          "include": "#param_name"
+        },
+        {
+          "include": "#core_types"
+        },
+        {
+          "include": "#integer_literal"
+        },
+        {
+          "include": "#storage_type_const"
+        },
+        {
+          "include": "#storage_modifier_mutable"
+        },
+        {
+          "include": "#built-in_core_assign"
+        },
+        {
+          "include": "#boolean_constant"
+        },
+        {
+          "include": "#circuit_name"
+        }
+      ]
+    },
+    {
+      "comment": "Group method",
+      "match": "(\\bgroup\\b)(?=\\:\\:|\\.)",
+      "name": "group.name.method.leo.hover"
+    },
+    {
+      "comment": "Documented parameter",
+      "name": "documented_parameter",
+      "begin": "(\\b\\w+\\b(?=:(?!:)))",
+      "end": "$",
+      "patterns": [
+        {
+          "include": "#param_name"
+        },
+        {
+          "include": "#core_types"
+        },
+        {
+          "include": "#integer_literal"
+        },
+        {
+          "include": "#storage_type_const"
+        },
+        {
+          "include": "#storage_modifier_mutable"
+        },
+        {
+          "include": "#built-in_core_assign"
+        },
+        {
+          "include": "#boolean_constant"
+        },
+        {
+          "include": "#circuit_name"
+        }
+      ]
+    },
+    {
+      "comment": "Variable type",
+      "name": "variable_type",
+      "begin": "((let)|(const)) \\b\\w+\\b: ",
+      "end": "$",
+      "captures": {
+        "2": {
+          "name": "storage.type.let.leo.hover"
+        },
+        "3": {
+          "name": "storage.type.const.leo.hover"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#core_types"
+        },
+        {
+          "include": "#integer_literal"
+        },
+        {
+          "include": "#storage_type_const"
+        },
+        {
+          "include": "#storage_modifier_mutable"
+        },
+        {
+          "include": "#built-in_core_assign"
+        },
+        {
+          "include": "#boolean_constant"
+        },
+        {
+          "include": "#circuit_name"
+        }
+      ]
+    },
+    {
+      "comment": "Test Context Annotation",
+      "name": "test.context.annotation.leo.hover",
+      "match": "@[a-zA-Z][a-zA-Z0-9_]*"
+    },
+    {
+      "include": "#core_types"
+    },
+    {
+      "include": "#integer_literal"
+    },
+    {
+      "include": "#storage_type_const"
+    },
+    {
+      "include": "#storage_modifier_mutable"
+    },
+    {
+      "include": "#built-in_core_assign"
+    },
+    {
+      "include": "#boolean_constant"
+    }
+  ],
+  "repository": {
+    "import_keyword": {
+      "comment": "Import keyword",
+      "match": "\\bimport\\b",
+      "name": "keyword.control.import.leo.hover"
+    },
+    "circuit_keyword": {
+      "comment": "Storage type circuit",
+      "match": "(?<!\\()\\bcircuit\\b",
+      "name": "storage.type.circuit.leo.hover"
+    },
+    "core_types": {
+      "comment": "Built-in/core type",
+      "name": "storage.type.core.leo.hover",
+      "match": "\\b(bool|field|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|string|char|address|signature|group|any|integer|scalar)\\b"
+    },
+    "mapping_keyword": {
+      "comment": "Built-in/core type",
+      "name": "storage.type.mapping.leo.hover",
+      "match": "\\b(Mapping|mapping)\\b"
+    },
+    "signature_keyword": {
+      "comment": "Built-in/core type",
+      "name": "storage.type.signature.leo.hover",
+      "match": "\\b(signature)\\b"
+    },
+    "algorithm_function_keyword": {
+      "comment": "Built-in/core type",
+      "name": "storage.algorithm.leo.hover",
+      "match": "\\b(ChaCha|BHP256|BHP512|BHP768|BHP1024|Pedersen64|Pedersen128|Poseidon2|Poseidon4|Poseidon8)\\b"
+    },
+    "integer_literal": {
+      "comment": "Integer literal (decimal)",
+      "name": "numeric.integer.decimal.leo.hover",
+      "match": "\\b((0|[1-9][0-9]*))([ui](8|16|32|64|128))?\\b"
+    },
+    "storage_modifier_mutable": {
+      "comment": "Storage modifier mutable",
+      "name": "storage.modifier.mut.leo.hover",
+      "match": "\\bmut\\b"
+    },
+    "storage_type_const": {
+      "comment": "Storage type const",
+      "name": "storage.type.const.leo.hover",
+      "match": "\\b(const)\\b"
+    },
+    "built-in_core_assign": {
+      "comment": "Built-in/core assign",
+      "name": "storage.type.assign.leo.hover",
+      "match": "\\b(((0|[1-9][0-9]*)(group|field)))|(\\(([0-9,\\s]+)\\)(group))"
+    },
+    "boolean_constant": {
+      "comment": "Boolean constant",
+      "name": "constant.language.boolean.leo.hover",
+      "match": "\\b(true|false)\\b"
+    },
+    "circuit_name": {
+      "comment": "Circuit name",
+      "name": "name.circuit.leo.hover",
+      "match": "\\b\\w+\\b"
+    },
+    "param_name": {
+      "comment": "Parameter name",
+      "name": "meta.name_params.leo.hover",
+      "match": "\\b(\\w+)\\b:"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "name": "Aleo",
+  "scopeName": "source.aleo",
+  "scope": "source.aleo",
+  "fileTypes": ["aleo"],
+  "extension": ["aleo"],
+  "patterns": [
+    {
+      "include": "#block_comment"
+    },
+    {
+      "include": "#line_comment"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#finalize"
+    },
+    {
+      "include": "#qualifiers"
+    },
+    {
+      "include": "#visibility"
+    },
+    {
+      "include": "#instructions"
+    },
+    {
+      "include": "#base_register"
+    },
+    {
+      "include": "#address"
+    },
+    {
+      "include": "#signature"
+    },
+    {
+      "include": "#arithmetic_type"
+    },
+    {
+      "include": "#boolean_type"
+    },
+    {
+      "include": "#boolean_literal"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#integer_literal"
+    },
+    {
+      "include": "#storage_type"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "name": "keyword.control.aleo",
+      "match": "\\b(function|program|as|by|interface|closure|into|import)\\b"
+    },
+    "finalize": {
+      "name": "finalize.aleo",
+      "match": "\\b(finalize|mapping|increment|decrement)\\b"
+    },
+    "qualifiers": {
+      "name": "qualifiers.aleo",
+      "match": "\\(|\\)"
+    },
+    "visibility": {
+      "name": "visibility.aleo",
+      "match": "\\b(constant|public|private|record|struct|aleo)\\b"
+    },
+    "instructions": {
+      "name": "instruction.aleo",
+      "match": "\\b(abs\\.w|abs|add\\.w|add|and|assert\\.eq|assert\\.neq|block\\.height|branch\\.eq|branch\\.neq|call|cast|cast\\.loosy|commit\\.bhp256|commit\\.bhp512|commit\\.bhp768|commit\\.bhp1024|commit\\.ped64|commit\\.ped128|div\\.w|div|double|gt|gte|hash\\.bhp256|hash\\.bhp512|hash\\.bhp768|hash\\.bhp1024|hash\\.ped64|hash\\.ped128|hash\\.psd2|hash\\.psd4|hash\\.psd8|inv|input|is\\.eq|is\\.neq|lt|lte|key|mod|mul\\.w|mul|nand|neg|nor|not|or|output|position|pow\\.w|pow|rand\\.chacha|rem\\.w|rem|shl\\.w|shl|shr\\.w|srh|sqrt|sub\\.w|sub|square|ternary|value|xor|get\\.or_use|get|set|contains|remove|sign\\.verify)\\b"
+    },
+    "base_register": {
+      "name": "constant.base.register.aleo",
+      "match": "r[0-9]+"
+    },
+    "address": {
+      "name": "address.literal.value.aleo",
+      "match": "\\baleo1[a-z0-9]*"
+    },
+    "signature": {
+      "name": "signature.literal.value.aleo",
+      "match": "\\bsign1[a-z0-9]*"
+    },
+    "arithmetic_type": {
+      "name": "constant.arithmetic.type.aleo",
+      "match": "\\b(field|group|address|signature|scalar|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128)"
+    },
+    "integer_literal": {
+      "name": "constant.numeric.integer.leo",
+      "match": "\\b([0-9][0-9_]*)([ui](8|16|32|64|128))?\\b"
+    },
+    "storage_type": {
+      "name": "constant.storage.type.aleo",
+      "match": "\\b(([0-9][0-9_]*)(group|field|scalar))"
+    },
+    "boolean_type": {
+      "name": "constant.boolean.type.aleo",
+      "match": "\\b(boolean)\\b"
+    },
+    "boolean_literal": {
+      "name": "constant.boolean.leo",
+      "match": "\\b(true|false)\\b"
+    },
+    "strings": {
+      "name": "string.quoted.double.aleo",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.aleo",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "block_comment": {
+      "comment": "Block comment",
+      "name": "punctuation.definition.block.comment.aleo",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    "line_comment": {
+      "comment": "Single-line comment",
+      "name": "punctuation.definition.inline.comment.aleo",
+      "begin": "//",
+      "end": "$"
+    }
+  }
+}

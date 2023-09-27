@@ -1,0 +1,557 @@
+{
+  "name": "Leo Theme",
+  "author": "AleoHQ",
+  "type": "dark",
+  "include": "./dark_vs.json",
+  "$schema": "vscode://schemas/color-theme",
+  "colors": {
+    // https://code.visualstudio.com/api/references/theme-color
+    // Base
+    "foreground": "#e3e3e3",
+    "focusBorder": "#931CFF",
+    // Activity Bar
+    // The Activity Bar is displayed either on the far left or right
+    // of the workbench and allows fast switching between views
+    // of the Side Bar.
+    "activityBar.activeBorder": "#931CFF",
+    // Side Bar
+    // The Side Bar contains views like the Explorer and Search.
+    "sideBar.background": "#272935",
+    "sideBar.foreground": "#e3e3e3",
+    "sideBarSectionHeader.background": "#272727",
+    "sideBarSectionHeader.foreground": "#ffffff",
+    "sideBarSectionHeader.border": "#931CFF",
+    // Editor Groups & Tabs
+    // https://code.visualstudio.com/api/references/theme-color#editor-groups-tabs
+    // Editor Groups are the containers of editors.
+    // There can be many editor groups. A Tab is the container
+    // of an editor. Multiple Tabs can be opened in one editor group.
+    "tab.activeBackground": "#12141D",
+    "tab.unfocusedActiveBackground": "#12141D",
+    "tab.inactiveBackground": "#ffffff00",
+    "tab.unfocusedInactiveBackground": "#171926",
+    "tab.activeForeground": "#e3e3e3",
+    "tab.unfocusedActiveForeground": "#e3e3e3",
+    "tab.unfocusedInactiveForeground": "#e3e3e3",
+    "tab.activeBorderTop": "#931CFF",
+    "tab.unfocusedActiveBorderTop": "#931CFF",
+    "tab.unfocusedHoverBackground": "#1c1f28",
+    "editorGroupHeader.tabsBackground": "#272935",
+    // Editor colors
+    // https://code.visualstudio.com/api/references/theme-color#editor-colors
+    // [Sublime Color Schemes] "background" - The default background color
+    "editor.background": "#12141D",
+    // [Sublime Color Schemes] "foreground" - The default color for text
+    "editor.foreground": "#ffffff",
+    // [Sublime Color Schemes] "invisibles" - The color for whitespace, when rendered. When not specified, defaults to foreground with an opacity of 0.35.
+    "editorWhitespace.foreground": "#e3e4e229",
+    // [Sublime Color Schemes] "caret" - The color of the caret
+    // [Sublime Color Schemes] "block_caret" - The color of the caret when using a block caret
+    "editorCursor.foreground": "#aeafad",
+    // [Sublime Color Schemes] "line_highlight" - The background color of the line containing the caret. Only used when the highlight_line setting is enabled.
+    "editor.lineHighlightBackground": "#ffffff21",
+    // [Sublime Color Schemes] "misspelling" - The color to use for the squiggly underline drawn under misspelled words.
+    "editorError.foreground": "#f48771",
+    // [Sublime Color Schemes] "fold_marker" - The color to use for the marker that indicates content has been folded.
+    // [Sublime Color Schemes] "accent" - A color made available for use by the theme. The Default theme uses this to highlight modified tabs when the highlight_modified_tabs setting is enabled.
+    // [Sublime Color Schemes] "find_highlight_foreground" - A color that will override the scope-based text color of text matched by the Find panel
+    "list.highlightForeground": "#18a3ff",
+    // [Sublime Color Schemes] "gutter" - The background color of the gutter
+    "editorGutter.background": "#12141d",
+    // [Sublime Color Schemes] "gutter_foreground" - The color of line numbers in the gutter
+    "editorLineNumber.foreground": "#858585",
+    //  [Sublime Color Schemes] "gutter_foreground_highlight" - The color of line numbers in the gutter when a line is highlighted
+    "editorLineNumber.activeForeground": "#c6c6c6",
+    // [Sublime Color Schemes] "line_diff_added" - The color of diff markers for added lines
+    "gitDecoration.addedResourceForeground": "#81b88b",
+    "diffEditor.insertedTextBackground": "#9bb95533",
+    // [Sublime Color Schemes] "line_diff_modified" - The color of diff markers for modified lines
+    "gitDecoration.modifiedResourceForeground": "#e2c08d",
+    // [Sublime Color Schemes] "line_diff_deleted" - The color of diff markers for deleted lines
+    "diffEditor.removedTextBackground": "#ff000033",
+    "gitDecoration.deletedResourceForeground": "#c74e39",
+    // [Sublime Color Schemes] "selection" - The background color of selected text
+    // [Sublime Color Schemes] "brackets_foreground" - The color to use when drawing the style specified by brackets_options.
+    "selection.background": "#264f78",
+    // [Sublime Color Schemes] "tags_foreground" - The color to use when drawing the style specified by tags_options.
+    "editor.selectionBackground": "#264f78",
+    // [Sublime Color Schemes] "selection_foreground" - A color that will override the scope-based text color of the selection
+    "list.activeSelectionForeground": "#ffffff",
+    // [Sublime Color Schemes] "inactive_selection" - The background color of a selection in a view that is not currently focused
+    "list.inactiveSelectionBackground": "#37373d",
+    // [Sublime Color Schemes] "inactive_selection_foreground" - A color that will override the scope-based text color of the selection in a view that is not currently focused
+    "list.inactiveSelectionForeground": "#ffffff",
+    "list.hoverBackground": "#343746",
+    // [Sublime Color Schemes] "highlight" - The border color for "other" matches when the Highlight matches option is selected in the Find panel. Also used to highlight matches in Find in Files results.
+    // [Sublime Color Schemes] "find_highlight" - The background color of text matched by the Find panel
+    "editor.findMatchHighlightBackground": "#ea5c0055",
+    // [Sublime Color Schemes] "guide" - The color used to draw indent guides. Only used if the option "draw_normal" is present in the setting indent_guide_options.
+    "editorIndentGuide.background": "#404040",
+    // [Sublime Color Schemes] "active_guide" - The color used to draw the indent guides for the indentation levels containing the caret. Only used if the option "draw_active" is present in the setting indent_guide_options.
+    "breadcrumb.activeSelectionForeground": "#fafafa",
+    // [Sublime Color Schemes] "stack_guide" - The color used to draw the indent guides for the parent indentation levels of the indentation level containing the caret. Only used if the option "draw_active" is present in the setting indent_guide_options.
+    "breadcrumb.foreground": "#e3e3e3cc",
+    // [Sublime Color Schemes] "shadow" - The color of the shadow used to show when a text area can be horizontally scrolled
+    "widget.shadow": "#0000005c",
+    // Status Bar colors
+    // https://code.visualstudio.com/api/references/theme-color#side-bar
+    "statusBar.background": "#931CFF",
+    "statusBar.foreground": "#e3e3e3",
+    // Activity Bar
+    // https://code.visualstudio.com/api/references/theme-color#activity-bar
+    "activityBar.background": "#191B25",
+    "activityBar.activeBackground": "#343746",
+    "activityBar.foreground": "#931CFF",
+    "activityBar.inactiveForeground": "#B2B6C7",
+    "activityBarBadge.background": "#931CFF",
+    "terminal.background": "#1E2029",
+    // Notification colors
+    // https://code.visualstudio.com/api/references/theme-color#notification-colors
+    "notificationsErrorIcon.foreground": "#FF5555",
+    "notificationsInfoIcon.foreground": "#18E48F",
+    "notificationsWarningIcon.foreground": "#ECE76b",
+    "notificationCenterHeader.foreground": "#FFFFFF",
+    "notificationCenterHeader.background": "#272935",
+    // Editor colors->Errors and warnings
+    // https://code.visualstudio.com/api/references/theme-color#editor-colors
+    "problemsErrorIcon.foreground": "#FF5555",
+    "problemsWarningIcon.foreground": "#ECE76b",
+    "panelTitle.activeBorder": "#FFFFFF",
+    "panelTitle.activeForeground": "#FFFFFF",
+    "panelTitle.inactiveForeground": "#B2B6C7",
+    "panel.background": "#1E2029",
+    // Sublime
+    "terminal.ansiCyan": "#11a8cd",
+    "terminal.ansiMagenta": "#bc3fbc",
+    "terminal.ansiBlue": "#2472c8",
+    "terminal.ansiYellow": "#e5e510",
+    "terminal.ansiGreen": "#0dbc79",
+    "terminal.ansiRed": "#cd3131",
+    "terminal.ansiWhite": "#e5e5e5",
+    "terminal.ansiBlack": "#000000",
+    // CodeLens
+    "editorCodeLens.foreground": "#c4ffc2",
+    "editorLink.activeForeground": "#c4ffc2"
+  },
+  "tokenColors": [
+    /*ENV - these settings should be in this file to work correctly after build for Intellij*/
+    {
+      "scope": [
+        "keyword.other.definition.dotenv" /* for Intellij */,
+        "keyword.other.definition.ini"
+      ],
+      "settings": {
+        "foreground": "#9cdcfe"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.separator.key-value.dotenv" /* for Intellij */,
+        "punctuation.separator.key-value.ini"
+      ],
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "scope": [
+        "value.other.definition.dotenv" /* for Intellij */,
+        "value.other.definition.ini"
+      ],
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "scope": [
+        "comment.line.number-sign.dotenv" /* for Intellij */,
+        "comment.line.number-sign.ini"
+      ],
+      "settings": {
+        "foreground": "#888888",
+        "fontStyle": "" /* for unknown reasons does not work in Intellij */
+      }
+    },
+    /*ENV - these settings should be in this file to work correctly after build for Intellij*/
+    {
+      "name": "Aleo Comment",
+      "scope": [
+        "punctuation.definition.block.comment.aleo",
+        "punctuation.definition.inline.comment.aleo"
+      ],
+      "settings": {
+        "foreground": "#888888"
+      }
+    },
+    {
+      "name": "Aleo Keyword",
+      "scope": ["keyword.control.aleo"],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    {
+      "name": "Aleo Finalize",
+      "scope": ["finalize.aleo"],
+      "settings": {
+        "foreground": "#AE81FF"
+      }
+    },
+    {
+      "name": "Aleo Qualifiers",
+      "scope": ["qualifiers.aleo"],
+      "settings": {
+        "foreground": "#FD971F"
+      }
+    },
+    {
+      "name": "Aleo Visibility",
+      "scope": [
+        "visibility.aleo",
+        "address.literal.value.aleo",
+        "signature.literal.value.aleo"
+      ],
+      "settings": {
+        "foreground": "#66D9EF"
+      }
+    },
+    {
+      "name": "Aleo Instruction",
+      "scope": ["instruction.aleo"],
+      "settings": {
+        "foreground": "#A6E22E"
+      }
+    },
+    {
+      "name": "Aleo Number",
+      "scope": [
+        "constant.arithmetic.type.aleo",
+        "constant.numeric.integer.leo",
+        "constant.storage.type.aleo",
+        "constant.boolean.type.aleo",
+        "constant.boolean.leo"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#AE81FF"
+      }
+    },
+    {
+      "name": "Aleo Register",
+      "scope": ["constant.base.register.aleo"],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Aleo String",
+      "scope": ["string.quoted.double.aleo", "constant.character.escape.aleo"],
+      "settings": {
+        "foreground": "#E6DB74"
+      }
+    },
+    {
+      "name": "Comment",
+      "scope": [
+        "comment.line.double-slash.leo",
+        "comment.line.documentation.leo",
+        "comment.block.documentation.leo",
+        "comment.block.leo",
+        "comment.line.leo.leoInput",
+        "comment.block.leo.leoInput",
+        "comment.leo.leoInput"
+      ],
+      "settings": {
+        "foreground": "#878787"
+      }
+    },
+    {
+      "name": "External file",
+      "scope": ["program.file.leo", "import.file.leo"],
+      "settings": {
+        "foreground": "#ECE76B"
+      }
+    },
+    {
+      "name": "Built-in/core type",
+      "scope": [
+        "storage.type.core.leo",
+        "section.definition.type.leo.leoInput",
+        "section.definition.expression.value.address.typed.leo.leoInput",
+        "section.definition.expression.value.group.tuple.leo.leoInput",
+        "storage.type.core.leo.hover",
+        "storage.type.built-in.method.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#86E101"
+      }
+    },
+    {
+      "name": "Double-quote string literal",
+      "scope": [
+        "string.quoted.double.leo",
+        "string.quoted.single.leo",
+        "section.definition.expression.string.leo.leoInput",
+        "section.definition.expression.char.leo.leoInput",
+        "path.import.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#ECE76B"
+      }
+    },
+    {
+      "name": "Control keyword",
+      "scope": [
+        "keyword.control.leo",
+        "keyword.control.import.leo",
+        "keyword.control.import.leo.hover",
+        "access.name.circuit.leo.hover",
+        "name.circuit.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Storage types",
+      "scope": [
+        "function.declaration.token.leo",
+        "storage.type.transition.leo",
+        "storage.type.inline.leo",
+        "storage.type.async.leo",
+        "storage.type.program.leo",
+        "storage.type.struct.leo",
+        "storage.type.function.leo",
+        "storage.type.finalize.leo",
+        "storage.type.let.leo",
+        "storage.type.then.leo",
+        "storage.type.const.leo",
+        "storage.type.mapping.leo",
+        "storage.type.constant.leo",
+        "storage.type.public.leo",
+        "storage.type.private.leo",
+        "storage.type.record.leo",
+        "storage.type.function.leo.hover",
+        "storage.type.finalize.leo.hover",
+        "storage.type.circuit.leo.hover",
+        "storage.type.let.leo.hover",
+        "storage.type.const.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Self variable",
+      "scope": ["variable.language.leo"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Storage modifier",
+      "scope": [
+        "storage.modifier.static.leo",
+        "storage.modifier.mut.leo",
+        "storage.modifier.mut.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Support variables",
+      "scope": ["support.variable.test.leo"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Integer literal (decimal)",
+      "scope": [
+        "numeric.integer.decimal.leo",
+        "address.literal.value.leo",
+        "numeric.integer.decimal.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#3FD1FF"
+      }
+    },
+    {
+      "name": "Built-in/core assign",
+      "scope": [
+        "storage.type.assign.leo",
+        "section.definition.type.array.demension.leo.leoInput",
+        "section.definition.expression.value.leo.leoInput",
+        "section.definition.expression.address.leo.leoInput",
+        "section.definition.expression.signature.leo.leoInput",
+        "storage.type.assign.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#3FD1FF"
+      }
+    },
+    {
+      "name": "Boolean constant",
+      "scope": [
+        "constant.language.boolean.leo",
+        "constant.language.boolean.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#3FD1FF"
+      }
+    },
+    {
+      "name": "Circuit Attribute",
+      "scope": [
+        "entity.other.attribute.name",
+        "section.definition.attribute.name.record.struct.leo.leoInput"
+      ],
+      "settings": {
+        "foreground": "#D781FF"
+      }
+    },
+    {
+      "name": "Import keywords",
+      "scope": ["syntax.all.import.leo", "keyword.operator.as.leo"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Circuit names",
+      "scope": ["circuit.name.static.call"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Group method",
+      "scope": ["group.name.method.leo.hover"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Mapping",
+      "scope": ["storage.type.mapping.leo.hover"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Signature",
+      "scope": ["storage.type.signature.leo.hover"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Algorithm method",
+      "scope": ["storage.algorithm.leo.hover"],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Context Annotation",
+      "scope": ["context.annotation.leo", "test.context.annotation.leo.hover"],
+      "settings": {
+        "foreground": "#f1fa8c"
+      }
+    },
+    {
+      "name": "Call methods",
+      "scope": [
+        "function.declaration.name.leo",
+        "special.functions.call.leo",
+        "storage.type.finalize.call.leo",
+        "circuit.method.name.call",
+        "function.name.call",
+        "entity.name.method.console.leo",
+        "call.name.method.leo.hover",
+        "access.name.attribute.leo.hover",
+        "entity.name.method.console.leo.hover",
+        "name.function.leo.hover",
+        "storage.name.built-in.method.leo.hover"
+      ],
+      "settings": {
+        "foreground": "#D781FF"
+      }
+    },
+    {
+      "name": "White color",
+      "scope": [
+        "meta.name_params.leo.hover",
+        "entity.other.function-attribute-name"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Red color (Server Syntax Coloring)",
+      "scope": [
+        "inline.definition.circuit.name.server.leo",
+        "static.call.circuit.name.server.leo",
+        "type.circuit.name.server.leo",
+        "import.circuit.name.server.leo",
+        "known.circuit.name.server.leo",
+        "async.name.call.server.leo",
+        "section.definition.type.record.struct.leo.leoInput",
+        "section.definition.internal.type.record.struct.leo.leoInput"
+      ],
+      "settings": {
+        "foreground": "#FF4789"
+      }
+    },
+    {
+      "name": "Purple color (Server Syntax Coloring)",
+      "scope": [
+        "file.definition.function.name.server.leo",
+        "circuit.method.name.static.call.server.leo",
+        "import.function.name.server.leo",
+        "function.name.call.server.leo",
+        "circuit.attribute.name.server.leo"
+      ],
+      "settings": {
+        "foreground": "#D781FF"
+      }
+    },
+    {
+      "name": "Green color (Server Syntax Coloring)",
+      "scope": [],
+      "settings": {
+        "foreground": "#86E101"
+      }
+    },
+    {
+      "name": "Blue color (Server Syntax Coloring)",
+      "scope": [],
+      "settings": {
+        "foreground": "#3FD1FF"
+      }
+    },
+    {
+      "name": "Yellow color (Server Syntax Coloring)",
+      "scope": [],
+      "settings": {
+        "foreground": "#ECE76B"
+      }
+    },
+    {
+      "name": "Gray color (Server Syntax Coloring)",
+      "scope": [],
+      "settings": {
+        "foreground": "#878787"
+      }
+    },
+    {
+      "name": "White color (Server Syntax Coloring)",
+      "scope": ["file.definition.circuit.name.server.leo"],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    }
+  ]
+}

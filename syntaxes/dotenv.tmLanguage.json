@@ -1,0 +1,29 @@
+{
+  "name": "dotenv",
+  "scopeName": "source.dotenv",
+  "scope": "source.dotenv",
+  "fileTypes": [".env"],
+  "extension": [".env"],
+  "patterns": [{ "include": "#line" }, { "include": "#comments" }],
+  "repository": {
+    "line": {
+      "match": "([a-zA-Z0-9_]+\\s*(?==))\\s*(=)\\s*(.*)",
+      "captures": {
+        "1": {
+          "name": "keyword.other.definition.dotenv"
+        },
+        "2": {
+          "name": "punctuation.separator.key-value.dotenv"
+        },
+        "3": {
+          "name": "value.other.definition.dotenv"
+        }
+      }
+    },
+    "comments": {
+      "begin": "#",
+      "end": "$",
+      "name": "comment.line.number-sign.dotenv"
+    }
+  }
+}

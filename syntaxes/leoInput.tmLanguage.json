@@ -1,0 +1,177 @@
+{
+  "name": "leoInput",
+  "scopeName": "source.leo.leoInput",
+  "scope": "source.leo.leoInput",
+  "fileTypes": ["in", "out", "state"],
+  "extension": ["in", "out", "state"],
+  "patterns": [
+    {
+      "include": "#section"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "line-comment": {
+      "comment": "Single-line comment",
+      "name": "comment.line.leo.leoInput",
+      "begin": "//",
+      "end": "$"
+    },
+    "block-comment": {
+      "comment": "Block comment",
+      "name": "comment.block.leo.leoInput",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    "comments": {
+      "comment": "Comment",
+      "name": "comment.leo.leoInput",
+      "patterns": [
+        {
+          "include": "#line-comment"
+        },
+        {
+          "include": "#block-comment"
+        }
+      ]
+    },
+    "section": {
+      "comment": "Section",
+      "name": "section.leo.leoInput",
+      "patterns": [
+        {
+          "comment": "Section header",
+          "match": "^\\s*\\[\\b(\\w+)\\b\\]",
+          "captures": {
+            "1": {
+              "name": "section.header.leo.leoInput"
+            }
+          }
+        },
+        {
+          "comment": "Section definition identifier",
+          "match": "\\b(\\w+)\\s*:",
+          "captures": {
+            "1": {
+              "name": "section.definition.identifier.leo.leoInput"
+            }
+          }
+        },
+        {
+          "comment": "Section definition expression string",
+          "name": "section.definition.expression.string.leo.leoInput",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "comment": "Section definition expression value",
+          "name": "section.definition.expression.value.leo.leoInput",
+          "match": "\\b([0-9][0-9_]*([ui](8|16|32|64|128)|(field|group|scalar))?|true|false)\\b"
+        },
+        {
+          "comment": "Section definition expression address",
+          "name": "section.definition.expression.address.leo.leoInput",
+          "match": "\\baleo1[a-z0-9]*"
+        },
+        {
+          "comment": "Section definition expression signature",
+          "name": "section.definition.expression.signature.leo.leoInput",
+          "match": "\\bsign1[a-z0-9_]*\\b"
+        },
+        {
+          "comment": "Section definition expression typed address value",
+          "match": "(address)\\(\\w*\\)",
+          "captures": {
+            "1": {
+              "name": "section.definition.expression.value.address.typed.leo.leoInput"
+            }
+          }
+        },
+        {
+          "comment": "Section definition expression tuple group value",
+          "match": "\\b((([0-9]*)(group|field|scalar)))",
+          "captures": {
+            "1": {
+              "name": "section.definition.expression.value.group.tuple.leo.leoInput"
+            }
+          }
+        },
+        {
+          "comment": "Section definition type",
+          "name": "section.definition.type.leo.leoInput",
+          "match": "\\b(string|field|group|bool|address|signature|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128)\\b"
+        },
+        {
+          "comment": "Section definition type array dimension",
+          "name": "section.definition.type.array.dimension.leo.leoInput",
+          "match": "\\b[0-9]+\\b"
+        },
+        {
+          "comment": "Section definition type record | struct",
+          "name": "section.definition.type.record.struct.leo.leoInput",
+          "match": "(?:(?<=\\b[a-z]+\\w*\\b:\\s*)|(?<=\\b[a-z]+\\w*\\b:\\s*\\b[A-Z]+\\w*\\b\\s*=\\s*))\\b[A-Z]+\\w*\\b(?:(?=\\s*{)|(?=\\s*=))"
+        },
+        {
+          "comment": "Section definition internal types of record | struct",
+          "begin": "(?<=^\\b[a-z]+\\w*\\b:\\s*\\b[A-Z]+\\w*\\b\\s*=\\s*\\b[A-Z]+\\w*\\b\\s*{\\s*)",
+          "end": "};",
+          "patterns": [
+            {
+              "include": "#line-comment"
+            },
+            {
+              "include": "#block-comment"
+            },
+            {
+              "comment": "Section definition attribute of record | struct",
+              "name": "section.definition.attribute.name.record.struct.leo.leoInput",
+              "match": "\\b(\\w+)\\b\\s*(?=:)"
+            },
+            {
+              "comment": "Section definition internal type record | struct",
+              "name": "section.definition.internal.type.record.struct.leo.leoInput",
+              "match": "(?<=\\b[a-z]+\\w*\\b:\\s*)\\b[A-Z]+\\w*\\b(?=\\s*{)"
+            },
+            {
+              "comment": "Section definition expression value",
+              "name": "section.definition.expression.value.leo.leoInput",
+              "match": "\\b([0-9][0-9_]*([ui](8|16|32|64|128)|(field|group|scalar))?|true|false)\\b"
+            },
+            {
+              "comment": "Section definition expression address",
+              "name": "section.definition.expression.address.leo.leoInput",
+              "match": "\\baleo1[a-z0-9]*"
+            },
+            {
+              "comment": "Section definition expression signature",
+              "name": "section.definition.expression.signature.leo.leoInput",
+              "match": "\\bsign1[a-z0-9_]*\\b"
+            }
+          ]
+        },
+        {
+          "comment": "Storage type const",
+          "name": "storage.type.const.leo.leoInput",
+          "match": "\\b(const)\\b"
+        },
+        {
+          "comment": "Storage type constant",
+          "name": "storage.type.constant.leo.leoInput",
+          "match": "\\b(constant)\\b"
+        },
+        {
+          "comment": "Storage type public",
+          "name": "storage.type.public.leo.leoInput",
+          "match": "\\b(public)\\b"
+        },
+        {
+          "comment": "Storage type private",
+          "name": "storage.type.private.leo.leoInput",
+          "match": "\\b(private)\\b"
+        }
+      ]
+    }
+  }
+}
